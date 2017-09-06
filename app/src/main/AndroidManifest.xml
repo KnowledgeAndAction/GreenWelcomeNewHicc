@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hicc.cloud">
+
+    <!-- 允许联网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 获取GSM（2g）、WCDMA（联通3g）等网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 获取wifi网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 获取sd卡写的权限，用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许读取手机状态 用于创建BmobInstallation -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".teacher.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon2"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <!-- 登录界面 -->
+        <activity
+            android:name=".teacher.activity.LogInActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 主页 -->
+        <activity
+            android:theme="@style/AppThemeActionBar"
+            android:name=".teacher.activity.MainActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 请销假 -->
+        <activity
+            android:name=".teacher.activity.LeaveBackActivity"
+            android:screenOrientation="portrait" />
+        <!-- 课堂签到 -->
+        <activity
+            android:name=".teacher.activity.ClassCheckActivity"
+            android:screenOrientation="portrait" />
+        <!-- 学生社团 -->
+        <activity
+            android:name=".teacher.activity.StudentCommunityActivity"
+            android:screenOrientation="portrait" />
+        <!-- 班级成长 -->
+        <activity
+            android:name=".teacher.activity.ClassGrowUpActivity"
+            android:screenOrientation="portrait" />
+        <!-- 学生缴费 -->
+        <!-- 宿舍成绩 -->
+        <activity
+            android:name=".teacher.activity.DormitoryScoreActivity"
+            android:screenOrientation="portrait" />
+        <!-- 学生档案 -->
+        <activity
+            android:name=".teacher.activity.StudentProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".teacher.activity.ClassListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".teacher.activity.StudentListActivity"
+            android:screenOrientation="portrait" />
+        <!-- 学生成绩 -->
+        <activity
+            android:name=".teacher.activity.StudentMarkActivity"
+            android:screenOrientation="portrait" />
+        <!-- 全部页面 -->
+        <activity
+            android:name=".teacher.activity.AllActivity"
+            android:screenOrientation="portrait" />
+        <!-- 联系界面下点击班级后的学生列表界面 -->
+        <activity
+            android:name=".teacher.activity.FriendStudentListActivity"
+            android:screenOrientation="portrait" />
+        <!-- 设置 -->
+        <activity
+            android:name=".teacher.activity.SettingActivity"
+            android:screenOrientation="portrait" />
+        <!-- 反馈 -->
+        <activity
+            android:name=".teacher.activity.FeedBackActivity"
+            android:screenOrientation="portrait" />
+        <!-- 关于 -->
+        <activity
+            android:name=".teacher.activity.AboutWeActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 摇一摇 -->
+        <activity
+            android:name=".teacher.activity.ShakeActivity"
+            android:screenOrientation="portrait" />
+        <!-- 扫一扫 -->
+        <activity
+            android:name=".teacher.activity.ScanActivity"
+            android:screenOrientation="portrait" />
+        <!-- 扫一扫结果页面 -->
+        <activity
+            android:name=".teacher.activity.ScanResultActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 学院学部对比 -->
+        <activity
+            android:name=".teacher.activity.CollegeFacultyComparedActivity"
+            android:screenOrientation="portrait" />
+        <!-- 现场报到 -->
+        <activity
+            android:name=".teacher.activity.LiveReportsActivity"
+            android:screenOrientation="portrait" />
+        <!--网上报到-->
+        <activity
+            android:name=".teacher.activity.OnlineReportActivity"
+            android:screenOrientation="portrait" />
+        <!--交费统计-->
+        <activity
+            android:name=".teacher.activity.PayStatisticsActivity"
+            android:screenOrientation="portrait" />
+        <!--宿舍列表-->
+        <activity
+            android:name=".teacher.activity.DormitoryListActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 网络中心介绍 -->
+        <activity
+            android:name=".teacher.activity.InternetActivity"
+            android:screenOrientation="portrait" />
+        <!-- 软件创业中心 -->
+        <activity
+            android:name=".teacher.activity.SoftwareActivity"
+            android:screenOrientation="portrait" />
+        <!-- 学部对比 -->
+        <activity
+            android:name=".teacher.activity.FacultyComparedActivity"
+            android:screenOrientation="portrait" />
+        <!-- 班级对比 -->
+        <activity
+            android:name=".teacher.activity.ClassComparedActivity"
+            android:screenOrientation="portrait" />
+        <!--新闻页-->
+        <activity
+            android:name=".teacher.activity.NewsActivity"
+            android:screenOrientation="portrait" />
+        <!--图片放大-->
+        <activity
+            android:name=".teacher.activity.ImageDetailsActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name=".teacher.service.UpdataService" />
+
+    </application>
+
+</manifest>

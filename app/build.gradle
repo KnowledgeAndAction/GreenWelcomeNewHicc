@@ -1,0 +1,68 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "25.0.0"
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        applicationId "com.hicc.cloud.teacher"
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: "com.hicc.cloud.teacher",
+                JPUSH_APPKEY : "1937bb943aeebf560b78155e", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:design:24.2.1'
+    compile 'com.android.support:cardview-v7:24.2.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    // 极光推送
+    compile 'cn.jiguang:jpush:2.1.9'
+    // 二维码扫描库
+    compile 'cn.yipianfengye.android:zxing-library:1.9'
+    // okhttp
+    compile 'com.squareup.okhttp:okhttp:2.4.0'
+    compile 'com.squareup.okio:okio:1.5.0'
+    compile 'com.zhy:okhttputils:2.6.2'
+    //compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    // 柱形图 饼状图控件
+    compile 'com.github.lecho:hellocharts-android:v1.5.8'
+    // eventbus
+    compile 'org.greenrobot:eventbus:3.0.0'
+    // 图片加载
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+
+    compile 'com.github.medyo:fancybuttons:1.8.4'
+}

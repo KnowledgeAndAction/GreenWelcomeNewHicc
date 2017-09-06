@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EBEEEF"
+    android:orientation="vertical">
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardlist_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:orientation="vertical"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardElevation="@dimen/cardview_default_elevation">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="8dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:id="@+id/tv_grade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:padding="5dp"
+                    android:text="年级："
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_division"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:padding="5dp"
+                    android:text="学部："
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_professional"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:padding="5dp"
+                    android:text="专业："
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/selector_news_bg"
+                    android:drawableRight="@drawable/icon_phone"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:text="电话："
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_dormitory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:padding="5dp"
+                    android:text="宿舍："
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_bednumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:padding="5dp"
+                    android:text="床号："
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/tv_national"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:padding="5dp"
+                    android:text="民族："
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_province"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:padding="5dp"
+                    android:text="省份："
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_nativeplace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:padding="5dp"
+                    android:text="籍贯："
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_oldschool"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:padding="5dp"
+                    android:text="毕业学校："
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_politics"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:padding="5dp"
+                    android:text="政治面貌："
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/tv_homeaddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:padding="5dp"
+                    android:text="家庭住址："
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_paymentstaus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:padding="5dp"
+                    android:text="缴费状态："
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_onlinereport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:padding="5dp"
+                    android:text="网上报到："
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_liveseportstatue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:padding="5dp"
+                    android:text="现场报到："
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+    </ScrollView>
+
+</LinearLayout>
